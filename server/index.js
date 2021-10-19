@@ -7,11 +7,11 @@ app.use(cors());
 app.use(express.json()); // When we want to be able to accept JSON.
 
 app.get('/',function(req,res) {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.sendFile(path.join(__dirname, '/client/index.html'));
 });
 
 app.get('/style', (req, res) => {
-  res.sendFile(path.join(__dirname, '../style.css'))
+  res.sendFile(path.join(__dirname, '/client/style.css'))
 })
 
 
