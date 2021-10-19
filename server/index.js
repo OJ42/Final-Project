@@ -6,6 +6,16 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // When we want to be able to accept JSON.
 
+app.get('/',function(req,res) {
+  res.sendFile(path.join(__dirname, '../index.html'));
+});
+
+app.get('/style', (req, res) => {
+  res.sendFile(path.join(__dirname, '../style.css'))
+})
+
+
+
 //show a random fortune when fortune button is pushed
 app.get('/api/fortunes', function (req, res) { 
   const fortunes = [
@@ -33,14 +43,6 @@ app.get('/api/fortunes', function (req, res) {
   let randomIndex = Math.floor(Math.random() * fortunes.length);
   let randomFortune = fortunes[randomIndex];
   res.status(200).send(randomFortune);
-})
-
-app.get('/',function(req,res) {
-  res.sendFile(path.join(__dirname, '../index.html'));
-});
-
-app.get('/style.css', (req, res) => {
-  res.sendFile(path.join(__dirname, '../style.css'))
 })
 
 const port = process.env.PORT || 4000
