@@ -1,0 +1,74 @@
+body, html {
+    background-image: url("https://wallpapercave.com/wp/wp3314824.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+h1 {
+    color: #da0a0a;
+    font-family: arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    }
+input {
+    height: 20px;
+    width: 200px;
+}   
+
+h2 {
+    color: #ffffff;
+    font-family: arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    }
+
+button {
+    background-color: transparent;
+    border: none;
+    margin: 5px;
+    }
+button:hover {
+    animation: effect 0.4s infinite;
+}
+@keyframes effect {
+    0% {
+        transform: translateX(0px) rotate(0deg);
+    }
+
+    20% {
+        transform: translateX(-4px) rotate(-4deg);
+    }
+
+    40% {
+        transform: translateX(-2px) rotate(-2deg);
+    }
+
+    60% {
+        transform: translateX(4px) rotate(4deg);
+    }
+
+    80% {
+        transform: translateX(2px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(0deg);
+    }
+}
+
+#Library {
+    height: 500px;
+    width: 500px;
+}
+
+#Library:hover {
+    content: url(/content/imgbin_magic-8-ball-eight-ball-pool-app-inventor-for-android-png.png);
+    height: 500px;
+    width: 500px;
+}

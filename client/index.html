@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back End Assessment</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="container">
+    <!-- give a fortune when pushed -->    
+    <section>
+      <!-- main title centered -->
+      <div style="text-align: center;">
+      <br><h1>Magic 8 Ball</h1>
+      </div>
+      <div style="text-align: center;">
+      <h2>Does the future favor you?</h1><br>
+      </div>
+      <!-- center ask the 8 ball -->
+      <div style="text-align: center;">  
+         
+      <input id='newItem' placeholder='Ask the magic 8 ball' />
+        
+    </div>    
+    <!-- center image of santa -->
+    <div class = "container" style="text-align: center;"> 
+      <button id='fortuneButton'><br><br><br>  
+        <img src = "..\content/clipart1770056.png" id ="Library">     
+      </button>      
+    </style>
+    </div>    
+    </section>
+    <!-- get axios working -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      // call the function for fortune button
+      document.querySelector("#fortuneButton").addEventListener("click", function() {
+        const newItem = document.querySelector('#newItem').value;
+        if (!newItem.trim()) {
+          alert('You have to ask a question')
+          return;
+        }
+        axios.get("http://localhost:4000/api/fortunes/")
+            .then(function (res) {
+              alert(res.data);
+              document.getElementById("newItem").value = "";
+            });
+      })         
+    </script>    
+  </body>
+</html>
