@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors());
-app.use(express.json()); // When we want to be able to accept JSON.
+app.use(express.json()); 
 
 app.use('/static', express.static('content'))
 
@@ -13,8 +13,6 @@ app.get('/',function(req,res) {
 });
 
 app.use("/style", express.static(path.join(__dirname, "../client/style.css")));
-
-
 
 //show a random fortune when fortune button is pushed
 app.get('/api/fortunes', function (req, res) { 
@@ -39,10 +37,10 @@ app.get('/api/fortunes', function (req, res) {
     'Outlook not so good.',
     'Very doubtful.'
   ]
-  //randonly select the fortune to display
-  let randomIndex = Math.floor(Math.random() * fortunes.length);
-  let randomFortune = fortunes[randomIndex];
-  res.status(200).send(randomFortune);
+//randonly select the fortune to display
+let randomIndex = Math.floor(Math.random() * fortunes.length);
+let randomFortune = fortunes[randomIndex];
+res.status(200).send(randomFortune);
 })
 
 const port = process.env.PORT || 4000
