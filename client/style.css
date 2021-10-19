@@ -68,7 +68,7 @@ button:hover {
 }
 
 #Library:hover {
-    content: url(../content/imgbin_magic-8-ball-eight-ball-pool-app-inventor-for-android-png.png);
+    content: url(/content/imgbin_magic-8-ball-eight-ball-pool-app-inventor-for-android-png.png);
     height: 500px;
     width: 500px;
 }
