@@ -38,7 +38,7 @@
           alert('You have to ask a question')
           return;
         }
-        axios.get("http://localhost:4000/api/fortunes/")
+        axios.get("/api/fortunes/")
             .then(function (res) {
               alert(res.data);
               document.getElementById("newItem").value = "";
