@@ -7,6 +7,7 @@ app.use(cors());
 app.use(express.json()); // When we want to be able to accept JSON.
 
 app.use(express.static('content'))
+
 app.get('/',function(req,res) {
   res.sendFile(path.join(__dirname, '../client/index.html'));
 });
